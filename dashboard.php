@@ -18,8 +18,11 @@ $role = $_SESSION['user_role'] ?? 'customer';
     <?php if ($role === 'admin'): ?>
         <div style="margin-top: 30px; text-align: left; background-color: #21262d; padding: 20px; border-radius: 6px; border: 1px solid #30363d;">
             <h3 style="margin-top: 0;">Admin Controls</h3>
-            <p style="color: #8b949e;">Create new events, manage existing ones, and view system-wide booking statistics.</p>
-            <a href="manage_events.php" class="btn" style="background-color: #1f6feb; border-color: #388bfd;">Manage Events</a>
+            <p style="color: #8b949e;">Manage your platform's events and oversee all user reservations.</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="manage_events.php" class="btn" style="background-color: #1f6feb; border-color: #388bfd;">Manage Events</a>
+                <a href="admin_bookings.php" class="btn" style="background-color: #238636; border-color: #2ea043;">View All Bookings</a>
+            </div>
         </div>
     <?php else: ?>
         <div style="margin-top: 30px; text-align: left; background-color: #21262d; padding: 20px; border-radius: 6px; border: 1px solid #30363d;">
